@@ -29,7 +29,7 @@ export default function Home({data}) {
 
 export async function getStaticProps() {
   
-  const res = await fetch(`http://localhost:1337/api/posts`)
+  const res = await fetch(`https://murmuring-dawn-44285.herokuapp.com/api/posts`)
   const data = await res.json()
 
   return {
@@ -37,3 +37,4 @@ export async function getStaticProps() {
     revalidate: 10
   }
 }
+//https://murmuring-dawn-44285.herokuapp.com/api/posts

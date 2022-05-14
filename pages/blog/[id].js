@@ -15,7 +15,7 @@ const Shock = ({data, paths}) => {
 export default Shock
 
 export async function getStaticPaths() {
-    const res = await fetch(`http://localhost:1337/api/posts`)
+    const res = await fetch(`https://murmuring-dawn-44285.herokuapp.com/api/posts`)
     const data = await res.json()
     const paths = data.data.map((post) => {
         return {params: {id: post.id.toString()}}
@@ -29,7 +29,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({params}) {
    
-    const res = await fetch(`http://localhost:1337/api/posts/${params.id}`)
+    const res = await fetch(`https://murmuring-dawn-44285.herokuapp.com/api/posts${params.id}`)
     const data = await res.json()
     return {
         props: {data},
