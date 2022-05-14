@@ -4,6 +4,7 @@ import { useState } from "react"
 const URL = process.env.STRAPIBASEURL
 
 export default function Home({data}) {
+  console.log(data)
   const [search, setSearch] = useState('')
   const handleSearch = (e) => {
     setSearch(e.target.value)
@@ -17,7 +18,7 @@ export default function Home({data}) {
          return <Link key={post.id} href={`/blog/${post.id}`} >
          <div>
          <a>{post.attributes.title}</a>
-         <p>{post.attributes.content}</p>
+         
          </div>
          </Link>
        })
