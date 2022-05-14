@@ -1,8 +1,6 @@
 import Link from "next/link"
 import { useState } from "react"
 
-const URL = process.env.STRAPIBASEURL
-
 export default function Home({data}) {
   const [search, setSearch] = useState('')
   const handleSearch = (e) => {
