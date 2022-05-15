@@ -28,7 +28,7 @@ export async function getStaticPaths() {
     }
 }
 
-export async function getServerSideProps({params}) {
+export async function getStaticProps({params}) {
    
     const res = await fetch(`https://murmuring-dawn-44285.herokuapp.com/api/posts/${params.id}`)
     const data = await res.json()

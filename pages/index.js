@@ -28,7 +28,7 @@ export default function Home({data}) {
 }
 
 
-export async function getStaticPaths() {
+export async function getStaticProps() {
   
   const res = await fetch(`https://murmuring-dawn-44285.herokuapp.com/api/posts`)
   const data = await res.json()
