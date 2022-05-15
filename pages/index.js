@@ -35,7 +35,7 @@ export async function getStaticProps() {
 
   return {
     props: {data},
-    
+    revalidate: 5
   }
 }
 //https://murmuring-dawn-44285.herokuapp.com/api/posts
