@@ -24,7 +24,7 @@ export async function getStaticPaths() {
     console.log(paths)
     return {
         paths,
-        fallback: false
+        fallback: 'blocking'
     }
 }
 
@@ -34,6 +34,6 @@ export async function getServerSideProps({params}) {
     const data = await res.json()
     return {
         props: {data},
-        
+        revalidate: 10
     }
 }
