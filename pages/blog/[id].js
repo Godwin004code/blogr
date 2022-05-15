@@ -28,12 +28,12 @@ export async function getStaticPaths() {
     }
 }
 
-export async function getStaticProps({params}) {
+export async function getServerSideProps({params}) {
    
     const res = await fetch(`https://murmuring-dawn-44285.herokuapp.com/api/posts/${params.id}`)
     const data = await res.json()
     return {
         props: {data},
-        revalidate: 5
+        
     }
 }
