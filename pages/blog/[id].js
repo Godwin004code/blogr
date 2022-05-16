@@ -7,15 +7,15 @@ const URL = process.env.STRAPIBASEURL
 const Shock = ({data, paths}) => {
    
    const post = data.data.attributes
-   const img = 'https://murmuring-dawn-44285.herokuapp.com'+post.img.data.attributes.formats.small.url
+   const img = 'http://murmuring-dawn-44285.herokuapp.com'+post.img.data.attributes.formats.small.url
    console.log(img);
-   console.log(data);
+  console.log(data);
   return (
     <div>
        <h2>{post.title}</h2>
-               <ReactMarkDown>
+          <ReactMarkDown>
           {post.content}</ReactMarkDown>
-       
+          
        <div>
            <img src={img} alt='text' />
        </div>
@@ -26,7 +26,7 @@ const Shock = ({data, paths}) => {
 export default Shock
 
 export async function getStaticPaths() {
-    const res = await fetch(`https://murmuring-dawn-44285.herokuapp.com/api/posts`)
+    const res = await fetch(`http://murmuring-dawn-44285.herokuapp.com/api/posts`)
     const data = await res.json()
     const paths = data.data.map((post) => {
         return {params: {id: post.id.toString()}}
@@ -40,7 +40,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({params}) {
    
-    const res = await fetch(`https://murmuring-dawn-44285.herokuapp.com/api/posts/${params.id}?populate=*`)
+    const res = await fetch(`http://murmuring-dawn-44285.herokuapp.com/api/posts/${params.id}?populate=*`)
     const data = await res.json()
     return {
         props: {data},
