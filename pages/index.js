@@ -30,7 +30,7 @@ export default function Home({data}) {
 
 export async function getStaticProps() {
   
-  const res = await fetch(`https://murmuring-dawn-44285.herokuapp.com/api/posts`)
+  const res = await fetch(`https://murmuring-dawn-44285.herokuapp.com/api/posts?populate=*`)
   const data = await res.json()
 
   return {
