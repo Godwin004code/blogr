@@ -1,4 +1,4 @@
-import { Head } from "next/document"
+
 import Home from "../components/Home"
 
 const index = ({data}) => {

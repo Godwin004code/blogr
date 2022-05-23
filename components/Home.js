@@ -1,6 +1,4 @@
-import Link from "next/link"
-import {Html} from "next/document"
-import { useState,useEffect } from "react"
+
 import styles from "../styles/Darkmode.module.css"
 import Body from "./Body/Body"
 
