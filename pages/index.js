@@ -2,6 +2,7 @@
 import Home from "../components/Home"
 
 const index = ({data}) => {
+  console.log(data)
   return (
    <>
      <Home data={data} />

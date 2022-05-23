@@ -4,7 +4,7 @@ import Head from "next/head"
 
 import LeftBar from "../../components/Body/LeftBar"
 import _styles from "../../styles/Body.module.css"
-import __styles from "../../styles/LeftBar.module.css"
+import __styles from "../../styles/Leftbar.module.css"
 
 import Nav from "../../components/Nav/Nav"
 import Filtered from "../../components/Post/Filtered"

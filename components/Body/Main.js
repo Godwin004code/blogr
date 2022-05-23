@@ -14,7 +14,8 @@ const Main = ({data, search}) => {
     </div>
     {
         data.data.filter((item) => item.attributes.title.toLowerCase().includes(search)).map((item) => {
-            const img = 'https://murmuring-dawn-44285.herokuapp.com/'+item.attributes.img.data.attributes.formats.small.url;
+            const img = 'https://murmuring-dawn-44285.herokuapp.com/'+item.attributes.img.data.attributes.formats.url;
+            console.log(img)
             const date = new Date(item.attributes.createdAt);
             const time = date.toLocaleTimeString()
             const _date = date.toLocaleDateString()

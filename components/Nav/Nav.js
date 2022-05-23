@@ -6,7 +6,7 @@ import { useGlobalContext } from "../Context/Context"
 import DesktopNav from "./DesktopNav"
 import MobileNav from "./MobileNav"
 const Nav = () => {
-  const {switchTheme, theme, clickedClass, lightTheme,darkTheme,ele, showNav} = useGlobalContext()
+  const {switchTheme, theme, clickedClass,showNav} = useGlobalContext()
   
   return (
     <section className={__styles.header__container}>

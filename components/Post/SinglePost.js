@@ -5,7 +5,7 @@ import LeftBar from "../Body/LeftBar"
 import RightBar from "../Body/RightBar"
 import styles from '../../styles/Body.module.css'
 import _styles from "../../styles/Main.module.css"
-import __styles from "../../styles/SinglePost.module.css"
+import __styles from "../../styles/Singlepost.module.css"
 import Link from 'next/link'
 import { FaChevronRight } from 'react-icons/fa'
 const SinglePost = ({img, title, content, category, author}) => {
