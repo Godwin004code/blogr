@@ -1,0 +1,35 @@
+.mobile_nav  {
+    display: none;
+}
+.mobile_nav ul {
+    display: none;
+}
+
+@media only screen and (max-width: 660px) {
+    
+.mobile_nav {
+    display: block;
+    position: absolute;
+    background-color: red;
+    z-index: 100;
+    transform: translateY(-200%);
+ }
+ 
+ .mobile_nav.active {
+     transform: translateY(0%);
+     transition: transform ease 1000ms;  
+    background-color: red;
+    position: absolute;
+ }
+ .mobile_nav ul {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     list-style-type: none;
+     
+ }
+ .mobile_nav li {
+     line-height: 60px;
+ }
+}

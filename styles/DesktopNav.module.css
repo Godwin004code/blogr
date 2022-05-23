@@ -1,0 +1,28 @@
+
+.nav {
+    width: 50%;
+}
+.nav ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav li {
+    list-style: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    margin-top: 0;
+     
+    padding: 10px;
+    
+    border-radius: 7px;
+}
+
+.nav li:hover {
+    background-color: var(--secondary);
+}
+@media only screen and (max-width: 660px) {
+    .nav {
+        display: none;
+    }
+}
