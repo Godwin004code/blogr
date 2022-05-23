@@ -21,7 +21,7 @@ const Shock = ({data, paths}) => {
         
     }, [])
    const post = data.data.attributes
-   const img = 'https://murmuring-dawn-44285.herokuapp.com'+post.img.data.attributes.formats.url
+   const img = 'https://murmuring-dawn-44285.herokuapp.com'+item.attributes.img.data.attributes.url;
    //console.log(img);
   return (
     <div>
