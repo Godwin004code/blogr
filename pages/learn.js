@@ -25,7 +25,7 @@ const learn = ({data}) => {
     <div  className={styles.main}>
     {data.data.filter((item) => item.attributes.Project_name.includes(txt)).map((item) => {
    const temp = item.attributes
-  const img = 'murmuring-dawn-44285.herokuapp.com'+ item.attributes.Pro.data.attributes.url;
+  const img = 'http://murmuring-dawn-44285.herokuapp.com'+ item.attributes.Pro.data.attributes.url;
    return (
      <Link href={`/learn/${temp.slug}`} key={item.id}>
      <div><SingleLearnPage name={temp.Project_name} img={img} />   </div>
