@@ -17,6 +17,7 @@ console.log(filtered);
   return (
       <>
        <Head>
+       <meta name='theme-color' content='rgb(33, 33, 52)' />
           <title>category of react</title>
           <meta name="description" content='This is the page that contains all categories that fall under React' />
       </Head>

@@ -11,24 +11,16 @@ import { FaSearch, FaTimes } from "react-icons/fa"
 import { useState } from "react"
 import Search from "../Post/Search"
 import Footer from "../Footer/Footer"
+import { useGlobalContext } from "../Context/Context"
 
 const Body = ({data}) => {
-  const [search, setSearch] = useState('')
-  const [openSearch, setOpenSearch] = useState(false)
-
-    const handleSearch = (e) => {
-      setSearch(e.target.value)
-    }
-
-    const handleClick = () => {
-      setOpenSearch(!openSearch)
-    }
+  const {handleClick,openSearch, search} = useGlobalContext()
 
   return (
     <>
     <Nav />
     <button className={styles.btn1} onClick={handleClick}> {openSearch ? <FaTimes/> : <FaSearch />}</button>
-    {openSearch && <Search  handleSearch={handleSearch} search={search} />}
+    {openSearch && <Search />}
     <div className={styles.body}>
         <div className={styles.leftbar}>
         leftbar

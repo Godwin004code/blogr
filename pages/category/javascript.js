@@ -8,12 +8,18 @@ import Filtered from "../../components/Post/Filtered"
 import _styles from "../../styles/Body.module.css"
 import __styles from "../../styles/Leftbar.module.css"
 import styles from "../../styles/config.module.css"
+import Head from "next/head"
 
 
 const js = ({data}) => {
 
   return (
     <>
+    <Head>
+          <title>categories of Git/GitHub</title>
+          <meta name="description" content='This is the page that contains all categories that fall under Git/GitHub' />
+          <meta name='theme-color' content='rgb(33, 33, 52)' />
+      </Head>
     <Nav />
     <div className={_styles.body}> 
     <div className={styles.leftbar}>

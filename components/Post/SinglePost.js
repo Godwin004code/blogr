@@ -7,13 +7,21 @@ import styles from '../../styles/Body.module.css'
 import _styles from "../../styles/Main.module.css"
 import __styles from "../../styles/Singlepost.module.css"
 import Link from 'next/link'
+import Head from "next/head"
 import { FaChevronRight } from 'react-icons/fa'
+
+
 const SinglePost = ({img, title, content, category, author, date, time}) => {
     const [scrolled, setScrolled] = useState(0)
   return (
     <>
-
+  <Head>
+    <meta name="description" content={title} />
+    <meta name='theme-color' content='rgb(33, 33, 52)' />
+    <title>{title}</title>
+  </Head>
     <Nav />
+ 
     <div id='long_link' className={_styles.long_link}>
       <Link href='/'><a>Home<span><FaChevronRight /></span></a></Link> <Link href={`/category/${category}`}><a>{category} <span><FaChevronRight /></span></a></Link> {title}
     </div>

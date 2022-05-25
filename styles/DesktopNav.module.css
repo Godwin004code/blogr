@@ -19,7 +19,8 @@
 }
 
 .nav li:hover {
-    background-color: var(--secondary);
+    background-color: var(--tertiary);
+    color: white;
 }
 @media only screen and (max-width: 660px) {
     .nav {

@@ -19,7 +19,7 @@ a {
 body.dark {
   background-color: var(--tertiary);
 }
-body.dark #post {
+body.dark #post, body.dark #learn_box {
   background-color: var(--primary);
   color: var(--main);
 }
@@ -46,7 +46,7 @@ body.light #category{
   background-color: var(--tertiary);
   color: var(--main);
 }
-body.light #post {
+body.light #post, body.light #learn_box {
   background-color: white;
   box-shadow: rgb(33 33 52 / 10%) 0px 1px 4px;
   color: var(--tertiary);

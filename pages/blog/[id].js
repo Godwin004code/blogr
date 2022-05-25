@@ -1,10 +1,12 @@
 import {useRouter} from "next/router"
 import Image from "next/image"
+
 import ReactMarkDown from "react-markdown"
 import SinglePost from "../../components/Post/SinglePost"
 import { useEffect, useState } from "react"
 import Footer from "../../components/Footer/Footer"
 import styles from "../../styles/Body.module.css"
+import Head from "next/head"
 
 const URL = process.env.STRAPIBASEURL
 
@@ -29,6 +31,12 @@ const Shock = ({data, paths}) => {
             const _date = date.toLocaleDateString()
    //console.log(img);
   return (
+      <>
+      <Head>
+    <meta name="description" content='This is the page that shows how to do basic things' />
+    <meta name='theme-color' content='rgb(33, 33, 52)' />
+    <title>Sandev Learn</title>
+    </Head>
     <div>
         
         <SinglePost title={post.title} category={post.category} author={post.Author} content={post.content} img={img} date={_date} time={time} />
@@ -40,6 +48,7 @@ const Shock = ({data, paths}) => {
             <Footer />
         </div>
         </div>
+        </>
   )
 }
 

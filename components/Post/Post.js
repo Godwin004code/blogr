@@ -8,7 +8,6 @@ const Post = ({id,img,category,title,excerpt,time,_date}) => {
    
   return (
     <div id='posts' className={styles.posts}>
-       
                 <Link href={`/blog/${id}`} >
                 <div id='post' className={styles.post}>
                     <div className={styles.article_img}>

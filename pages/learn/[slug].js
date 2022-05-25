@@ -1,12 +1,10 @@
-import {useRouter} from "next/router"
 
-import SinglePost from "../../components/Post/SinglePost"
 import { useEffect, useState } from "react"
 import Footer from "../../components/Footer/Footer"
 import styles from "../../styles/Body.module.css"
-import Singlelearn from "../../components/Learn Page/Singlelearn"
+import Singlelearn from "../../components/LearnPage/Singlelearn"
 
-const URL = process.env.STRAPIBASEURL
+//const URL = process.env.STRAPIBASEURL
 
 const Slug = ({data, paths}) => {
     console.log(data)
@@ -31,7 +29,7 @@ const Slug = ({data, paths}) => {
    //console.log(img);
   return (
     <div>
-      <Singlelearn />
+      <Singlelearn data={data} />
         <div className="progress_container">
             <div style={{width: `${scrolled}%`}} className="progress_line"></div>
         </div>

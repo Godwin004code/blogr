@@ -18,6 +18,7 @@ const js = ({data}) => {
        <Head>
           <title>categories of Next JS </title>
           <meta name="description" content='This is the page that contains all categories that fall under Next JS' />
+          <meta name='theme-color' content='rgb(33, 33, 52)' />
       </Head>
       <Nav />
     <div className={_styles.body}> 
