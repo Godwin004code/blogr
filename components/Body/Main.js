@@ -6,15 +6,17 @@ import Post from "../Post/Post"
 const Main = ({data, search}) => {
   
    
-  // 'https://murmuring-dawn-44285.herokuapp.com/'+
+  // 'https://murmuring-dawn-44285.herokuapp.com/ item.attributes.img.data.attributes.url'+
+
+  // localhost item.attributes.img.data.attributes.url;
   return (
     <>
     <div>
       
     </div>
     {
-        data.data.filter((item) => item.attributes.title.includes(search.toLowerCase())).map((item) => {
-            const img = 'https://murmuring-dawn-44285.herokuapp.com'+item.attributes.img.data.attributes.url;
+        data.data.filter((item) => item.attributes.title.toLowerCase().includes(search)).map((item) => {
+            const img = 'https://murmuring-dawn-44285.herokuapp.com/'+ item.attributes.img.data.attributes.url
             console.log(img)
             const date = new Date(item.attributes.createdAt);
             const time = date.toLocaleTimeString()

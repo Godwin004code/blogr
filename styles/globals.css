@@ -19,6 +19,38 @@ a {
 body.dark {
   background-color: var(--tertiary);
 }
+body.dark #post {
+  background-color: var(--primary);
+  color: var(--main);
+}
+body.dark #category {
+  background-color: var(--main);
+}
+body.dark #category:hover {
+  color: var(--main);
+  background-color: var(--tertiary);
+}
+body.dark #author {
+  border-bottom: 1px solid var(--main);
+}
+body.dark #main, body.dark .h2, body.dark #title, body.dark #long_link {
+  color: var(--main);
+}
+body.light #long_link {
+  color: var(--tertiary);
+}
+body.light #author {
+  border-bottom: 1px solid var(--tertiary);
+}
+body.light #category{
+  background-color: var(--tertiary);
+  color: var(--main);
+}
+body.light #post {
+  background-color: white;
+  box-shadow: rgb(33 33 52 / 10%) 0px 1px 4px;
+  color: var(--tertiary);
+}
 body.light {
   background-color: var(--main);
 }
@@ -35,10 +67,10 @@ body.dark .sun {
   display: block;
 }
 :root {
-  --primary: #59ff4d;
+  --primary: rgb(33, 33, 52);
   --secondary: #92ff8b;
-  --tertiary: #003109;
-  --main: #fff;
+  --tertiary: rgb(24, 24, 38);
+  --main: rgb(246, 246, 249);;
   --black: #000;
 }
 .mobile_nav {
@@ -55,24 +87,28 @@ body.dark .sun {
   height: 10px;
   background-color: black;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 660px) {
   
 .mobile_nav {
   display: block;
   position: absolute;
-  background-color: red;
+  background-color: var(--main);
+
   z-index: 100;
   transform: translateY(-200%);
   transition: transform ease 500ms; 
   left: 5%;
   right: 5%;
+  box-shadow: rgb(33 33 52 / 10%) 0px 1px 4px;
 }
 
 .mobile_nav.active {
    transform: translateY(0%);
    transition: transform ease 1000ms;  
-  background-color: red;
+  background-color: var(--main);
+  box-shadow: rgb(33 33 52 / 10%) 0px 1px 4px;
   position: absolute;
+
 }
 .mobile_nav ul {
    display: flex;

@@ -8,7 +8,7 @@ const DesktopNav = () => {
             <Link href='/'>
                 <li>Home</li>
             </Link>
-            <Link href='/'>
+            <Link href='/learn'>
                 <li>Learn</li>
             </Link>
            

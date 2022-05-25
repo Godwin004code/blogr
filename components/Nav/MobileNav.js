@@ -11,10 +11,32 @@ const MobileNav = () => {
             <Link href='/'>
                 <li>Home</li>
             </Link>
-            <Link href='/'>
+            <Link href='/learn'>
                 <li>Learn</li>
             </Link>
-           
+           <span>
+               <li>Categories</li>
+               <div className={styles.submenu_links}>
+                   <Link href='/category/html'>
+                       <li>HTML</li>
+                   </Link>
+                   <Link href='/category/css'>
+                       <li>CSS</li>
+                   </Link>
+                   <Link href='/category/javascript'>
+                       <li>JavaScript</li>
+                   </Link>
+                   <Link href='/category/react'>
+                       <li>React JS</li>
+                   </Link>
+                   <Link href='/category/nextjs'>
+                       <li>Next JS</li>
+                   </Link>
+                   <Link href='/category/python'>
+                       <li>Python</li>
+                   </Link>
+                   </div>
+           </span>
             <Link href='/'>
                 <li>Get in touch</li>
             </Link>

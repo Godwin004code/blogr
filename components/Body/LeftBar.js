@@ -1,7 +1,6 @@
 
 import Link from "next/link"
 import styles from "../../styles/Leftbar.module.css"
-import Category from "./Category"
 
 const LeftBar = ({data}) => {
   
@@ -10,7 +9,7 @@ const LeftBar = ({data}) => {
       <Link href='/category/html'>
       <div className={styles.category}>
             <div>
-              html
+              <a>html</a>
             </div>
 
             <div className={styles.total}>9+</div>
@@ -19,7 +18,7 @@ const LeftBar = ({data}) => {
           <Link href='/category/css'>
           <div className={styles.category}>
             <div>
-              css
+              <a>css</a>
             </div>
             <div className={styles.total}>9+</div>
           </div>
@@ -27,7 +26,7 @@ const LeftBar = ({data}) => {
           <Link href='/category/javascript'>
           <div className={styles.category}>
             <div>
-              javascript
+              <a>javascript</a>
             </div>
             <div className={styles.total}>9+</div>
           </div>
@@ -35,15 +34,15 @@ const LeftBar = ({data}) => {
           <Link href='/category/react'>
           <div className={styles.category}>
             <div>
-              react
+              <a>react</a>
             </div>
             <div className={styles.total}>9+</div>
           </div>
           </Link>
-          <Link href='/category/next'>
+          <Link href='/category/nextjs'>
           <div className={styles.category}>
             <div>
-              next.js
+              <a>next js</a>
             </div>
             <div className={styles.total}>9+</div>
           </div>
@@ -51,7 +50,7 @@ const LeftBar = ({data}) => {
           <Link href='/category/python'>
           <div className={styles.category}>
             <div>
-              python
+              <a>python</a>
             </div>
             <div className={styles.total}>9+</div>
           </div>
@@ -59,7 +58,7 @@ const LeftBar = ({data}) => {
           <Link href='/category/github'>
           <div className={styles.category}>
             <div>
-              git/github
+              <a>git/github</a>
             </div>
             <div className={styles.total}>9+</div>
            

@@ -28,16 +28,16 @@ const Body = ({data}) => {
     <>
     <Nav />
     <button className={styles.btn1} onClick={handleClick}> {openSearch ? <FaTimes/> : <FaSearch />}</button>
-    {openSearch && <Search  handleSearch={handleSearch} />}
+    {openSearch && <Search  handleSearch={handleSearch} search={search} />}
     <div className={styles.body}>
         <div className={styles.leftbar}>
-        <LeftBar data={data} />
+        leftbar
         </div>
         <div className={styles.main}>
-        <Main data={data} search={search} />
+        <Main data={data} search={search.toLowerCase()} />
         </div>
         <div className={styles.rightbar}>
-        <RightBar />
+        <LeftBar />
         </div>
     </div>
     <div className={styles.footer}>

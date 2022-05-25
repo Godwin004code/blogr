@@ -1,0 +1,24 @@
+.footer_container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    
+}
+.footer_container h2 {
+    padding-bottom: 1rem;
+}
+.footer_container span {
+    font-size: 1.2rem;
+}
+.social_media {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 30%;
+    margin: 1rem 0;
+}
+.social_media li {
+    cursor: pointer;
+    font-size: 1.6rem;
+
+}

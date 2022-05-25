@@ -1,14 +1,15 @@
 import {useRouter} from "next/router"
-import Image from "next/image"
-import ReactMarkDown from "react-markdown"
+
 import SinglePost from "../../components/Post/SinglePost"
 import { useEffect, useState } from "react"
 import Footer from "../../components/Footer/Footer"
 import styles from "../../styles/Body.module.css"
+import Singlelearn from "../../components/Learn Page/Singlelearn"
 
 const URL = process.env.STRAPIBASEURL
 
-const Shock = ({data, paths}) => {
+const Slug = ({data, paths}) => {
+    console.log(data)
     const [scrolled, setScrolled] = useState(0)
 
     const showProgress = () => {
@@ -22,20 +23,19 @@ const Shock = ({data, paths}) => {
         return () => window.removeEventListener('scroll', showProgress)
         
     }, [])
-   const post = data.data.attributes
-   const img = 'http://localhost:1337'+post.img.data.attributes.url;
-   const date = new Date(post.createdAt);
-            const time = date.toLocaleTimeString()
-            const _date = date.toLocaleDateString()
+   //const post = data.data.attributes
+   //const img = 'http://localhost:1337'+post.Pro.data.attributes.url;
+   //const date = new Date(post.createdAt);
+     //       const time = date.toLocaleTimeString()
+       //     const _date = date.toLocaleDateString()
    //console.log(img);
   return (
     <div>
-        
-        <SinglePost title={post.title} category={post.category} author={post.Author} content={post.content} img={img} date={_date} time={time} />
-        
+      <Singlelearn />
         <div className="progress_container">
             <div style={{width: `${scrolled}%`}} className="progress_line"></div>
         </div>
+        
         <div className={styles.footer}>
             <Footer />
         </div>
@@ -43,13 +43,13 @@ const Shock = ({data, paths}) => {
   )
 }
 
-export default Shock
+export default Slug
 
 export async function getStaticPaths() {
-    const res = await fetch(`http://murmuring-dawn-44285.herokuapp.com/api/posts`)
+    const res = await fetch(`http://murmuring-dawn-44285.herokuapp.com/api/learns`)
     const data = await res.json()
     const paths = data.data.map((post) => {
-        return {params: {id: post.id.toString()}}
+        return {params: {slug: String(post.attributes.slug)}}
     })
     console.log(paths)
     return {
@@ -59,9 +59,12 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params}) {
-   
-    const res = await fetch(`http://murmuring-dawn-44285.herokuapp.com/api/posts/${params.id}?populate=*`)
+    console.log(params);
+  
+    const res = await fetch(`http://murmuring-dawn-44285.herokuapp.com/api/learns/${params.slug}`)
+  
     const data = await res.json()
+    
     return {
         props: {data},
         revalidate: 10

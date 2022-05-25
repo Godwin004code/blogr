@@ -13,7 +13,7 @@ const Nav = () => {
         <header className={__styles.header}>
     <div>
     <Link href='/'>
-    <h2 style={{cursor: 'pointer'}}>HackSan.io</h2>
+    <h2 style={{cursor: 'pointer'}}>sandev</h2>
     </Link>
     </div>
    

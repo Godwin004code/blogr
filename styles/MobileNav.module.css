@@ -29,7 +29,12 @@
      list-style-type: none;
      
  }
- .mobile_nav li {
-     line-height: 60px;
- }
+ 
+ .submenu_links {
+    text-align: center;
+    
+}
+.submenu_links li {
+    font-size: .8rem;
+}
 }

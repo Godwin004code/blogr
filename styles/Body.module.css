@@ -5,12 +5,14 @@
 .leftbar {
     width: 17%;
     position: fixed;
+   
 }
 
 .rightbar {
   width: 15%;
   position: fixed;
   right: 0;
+ 
 }
 
 .main {
@@ -21,10 +23,10 @@
     left: 25%;
 
 }
-
 .footer {
     background-color: var(--black);
     color: white;
+    z-index: 100000;
 }
 
 /* 59ff4d 
@@ -35,6 +37,20 @@
     border-radius: 6px;
     border: 0;
     font-size: 1rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .leftbar {
+        display: none;
+        
+    }
+    .rightbar {
+        right: 10%;
+    }
+    .main {
+        width: 60%;
+        left: 5%;
+    }
 }
 
 @media only screen and (max-width: 800px) {
