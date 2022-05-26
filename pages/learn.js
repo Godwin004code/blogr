@@ -5,13 +5,14 @@ import SingleLearnPage from "../components/LearnPage/SingleLearnPage"
 import Search from "../components/Post/Search"
 import Nav from "../components/Nav/Nav"
 import { FaSearch, FaTimes } from "react-icons/fa"
-import { useGlobalContext } from "../components/Context/Context"
+
 import styles from "../styles/SingleLearnPage.module.css"
+import LearnSearch from "../components/LearnPage/LearnSearch"
 
 const learn = ({data}) => {
  //console.log(data)
- const {search,openSearch, handleClick} = useGlobalContext()
- const txt = search.toLowerCase()
+ 
+ 
   return (
     <>
     <Head>
@@ -20,10 +21,9 @@ const learn = ({data}) => {
     <title>Sandev Learn</title>
     </Head>
     <Nav />
-    <button onClick={handleClick}> {openSearch ? <FaTimes/> : <FaSearch />}</button>
-    {openSearch && <Search  />}
+    <LearnSearch />
     <div  className={styles.main}>
-    {data.data.filter((item) => item.attributes.Project_name.includes(txt)).map((item) => {
+    {data.data.filter((item) => item.attributes.Project_name.includes()).map((item) => {
    const temp = item.attributes
   const img = 'http://murmuring-dawn-44285.herokuapp.com'+ item.attributes.Pro.data.attributes.url;
    return (
