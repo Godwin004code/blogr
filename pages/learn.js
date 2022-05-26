@@ -4,7 +4,7 @@ import Link from "next/link"
 import SingleLearnPage from "../components/LearnPage/SingleLearnPage"
 import Search from "../components/Post/Search"
 import Nav from "../components/Nav/Nav"
-import { FaSearch, FaTimes } from "react-icons/fa"
+
 
 import styles from "../styles/SingleLearnPage.module.css"
 import LearnSearch from "../components/LearnPage/LearnSearch"
