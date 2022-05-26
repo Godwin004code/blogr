@@ -11,7 +11,7 @@ console.log(filtered);
     <div>
       {
         filtered.map((item) => {
-          const img = 'https://murmuring-dawn-44285.herokuapp.com/'+ item.attributes.img.data.attributes.url;
+          const img = 'https://murmuring-dawn-44285.herokuapp.com'+ item.attributes.img.data.attributes.url;
           const date = new Date(item.attributes.createdAt);
           const time = date.toLocaleTimeString()
           const _date = date.toLocaleDateString()
