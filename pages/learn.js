@@ -2,7 +2,6 @@
 import Head from "next/head"
 import Link from "next/link"
 import SingleLearnPage from "../components/LearnPage/SingleLearnPage"
-import Search from "../components/Post/Search"
 import Nav from "../components/Nav/Nav"
 
 
